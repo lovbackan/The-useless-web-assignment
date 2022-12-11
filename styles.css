@@ -19,12 +19,10 @@ header {
   justify-content: space-between;
   top: 0;
   height: 3rem;
-  width: 100%;
-  background-color: aliceblue;
+  width: 100vw;
   z-index: 1000;
   align-items: center;
   background-color: black;
-  margin-left: 1rem;
 }
 body {
   margin-top: 3rem;
@@ -37,6 +35,11 @@ body {
 }
 
 h1 {
+  margin-left: 1rem;
+}
+
+h1,
+h2 {
   font-family: nasalization;
   font-size: large;
 }
@@ -77,6 +80,7 @@ button {
   border-radius: 20px;
   flex-direction: column;
   align-items: center;
+  padding-top: 1rem;
 }
 
 .planetCardPictureContainer,
@@ -223,13 +227,17 @@ button {
 
 @media screen and (max-width: 360px) {
   h1 {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 
 @media screen and (min-width: 500px) {
   h1 {
     font-size: x-large;
+  }
+
+  button {
+    width: 5rem;
   }
 }
 
@@ -238,10 +246,19 @@ button {
     font-size: xx-large;
   }
 
+  h2 {
+    font-size: x-large;
+  }
+
   body {
     flex-direction: row;
     height: 100vh;
   }
+
+  button {
+    width: 15rem;
+  }
+
   .solarSystem {
     width: 35rem;
     height: 35rem;

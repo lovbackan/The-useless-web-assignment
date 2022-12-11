@@ -509,7 +509,7 @@ generationButton.addEventListener('click', () => {
   planetName.innerText = galaxyName;
   galaxyNames.splice(galaxyNames.indexOf(galaxyName), 1);
 
-  //The following arrays restores on eachclick the previous generated values.
+  //The following arrays restores the previous generated values on eachclick.
   systemCountries = [];
   systemResources = [];
   systemLifeForms = [];
@@ -518,6 +518,7 @@ generationButton.addEventListener('click', () => {
   systemLifeFormsList = [];
 
   for (let i = 0; i < planets.length - 1; i++) {
+    //for each planet minus the sun, pick out a random country, resource and lifeform and push them into a new array
     const randomCountryIndex = Math.floor(Math.random() * countryList.length);
     const countryName = countryList[randomCountryIndex];
     systemCountries.push(countryName);
@@ -531,21 +532,22 @@ generationButton.addEventListener('click', () => {
     systemLifeForms.push(life);
   }
 
+  //Before i had some problem with the info displayed during galaxy, this join does so after each item it creates a new line
   systemCountriesList = systemCountries.join(',\n');
   systemResourcesList = systemResources.join(',\n');
   systemLifeFormsList = systemLifeForms.join(',\n');
 
+  //this converts the arrays into strings and displays them into the galaxy info.
   territoryName.innerText = systemCountriesList.toString();
   resourceName.innerText = systemResourcesList.toString();
   lifeFormName.innerText = systemLifeFormsList.toString();
 
-  //If solarsystem and planetCard are not active then activate them
-
+  // When u click the generate system button, if solarsystem and planetCard are not active then activate them
   if (!solarSystem.classList.contains('active')) {
     solarSystem.classList.toggle('active');
     planetCard.classList.toggle('active');
   } else {
-    //If solar system and planetcard are active then remove previous planetPictureActivation
+    //If solar system and planetcard are active then remove previous planetPictureActivation (this was a buggfix)
     planetPicture.classList.remove('active');
     planetPicture.style.backgroundColor = 'black';
   }

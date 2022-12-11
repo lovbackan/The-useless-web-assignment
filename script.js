@@ -547,13 +547,13 @@ generationButton.addEventListener('click', () => {
     solarSystem.classList.toggle('active');
     planetCard.classList.toggle('active');
   } else {
-    //If solar system and planetcard are active then remove previous planetPictureActivation (this was a buggfix)
+    //If solar system and planetcard are active then remove previous planetPictureActivation (this was a buggfix, if u pressed a planet and then generated a new galaxy it would display the previous planet above the mini solar system)
     planetPicture.classList.remove('active');
     planetPicture.style.backgroundColor = 'black';
   }
 
   planetCardPictureContainer.addEventListener('click', () => {
-    //If planetPicture is active when u click on PlanetCardContainer it should remove previous Planet picture and display solarsystem again
+    //If planetPicture is active when u click on PlanetCardContainer it should remove previous Planet picture and display solarsystem again, in retrospect i could have made this part easier.
     if (planetPicture.classList.contains('active')) {
       planetPicture.classList.remove('active');
       planetCardPictureContainer.style.cursor = 'default';
@@ -567,22 +567,24 @@ generationButton.addEventListener('click', () => {
   });
 
   planets.forEach((planet, index) => {
-    //Randomizes a planet name and removes it from the planetNames array.
+    //gives every planet a cursor
+    planet.style.cursor = 'pointer';
+    //Randomizes and give each planet a name and removes it from the planetNames array (so there can not be any duplicates when u generate a new system)
     const randomPlanetNameIndex = Math.floor(
       Math.random() * planetNames.length
     );
     const name = planetNames[randomPlanetNameIndex];
     planetNames.splice(planetNames.indexOf(name), 1);
 
-    //randomizes a territory name for each planet from the array systemCountries
-
+    //randomizes a territory name for each planet from the array systemCountries which is generated when u press the generate system button. There is only 7 countires in the array which leaves no space for the sun to get a terriotry since that would be weird but also kinda sci-fi)
     const planetNation = systemCountries[index];
+
+    //these empty arrays gets filled for each planet a resource and lifeform, but they also help clean out the previous stored values if u press the generate system
     let planetResource = [];
     let planetLifeForm = [];
 
-    //For every planet that is not the sun generate a rgb color
+    //For every planet that is not the sun generate a rgb color, and give them a resource and lifeform
     if (!planet.classList.contains('sun')) {
-      planet.style.cursor = 'pointer';
       let r = Math.floor(Math.random() * 255);
       let g = Math.floor(Math.random() * 255);
       let b = Math.floor(Math.random() * 255);
@@ -602,7 +604,7 @@ generationButton.addEventListener('click', () => {
       planet.style.border = '0px';
     });
 
-    //planetpicture is always first displayed as the generated solarsystem
+    //The planetpicture (infoPicture) is always first displayed as the generated solarsystem
     planetPicture.innerHTML = solarSystem.innerHTML;
 
     planet.addEventListener('click', () => {

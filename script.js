@@ -15,6 +15,7 @@ const territoryName = document.querySelector('#territoryName p');
 const resourceName = document.querySelector('#resources p');
 const lifeFormName = document.querySelector('#lifeForms p');
 
+//sorry for the long arrays, prettier wants them to be displayed this way
 const planetNames = [
   'Vucuilara',
   'Zaphogawa',
@@ -481,12 +482,12 @@ const elements = [
 
 let systemResources = [];
 
-//These 3 are created to get the array to become a string where there is a newline after each item (important for the galaxy info display)
+//These 3 are created to get the array to become a string where there is a newline after each item (important for the galaxy info display see more info below)
 let systemCountriesList = [];
 let systemResourcesList = [];
 let systemLifeFormsList = [];
 
-//On click start animation (BUGG -only works once tho);
+//On click start animation (BUGG -only works once tho, then u need to refresh the page);
 trajButton.addEventListener('click', () => {
   seventhTraj.style.transform = 'rotate(360deg)';
   seventhPlan.style.transform = 'rotate(-360deg)';
@@ -496,7 +497,7 @@ window.onscroll = function () {
   scrollRotate();
 };
 
-//now you can either press button or scroll to start the animation (still dont know why it only works once)
+//now you can either press button or scroll to start the animation (still only works once)
 function scrollRotate() {
   seventhTraj.style.transform = 'rotate(360deg)';
   seventhPlan.style.transform = 'rotate(-360deg)';
@@ -608,19 +609,19 @@ generationButton.addEventListener('click', () => {
     planetPicture.innerHTML = solarSystem.innerHTML;
 
     planet.addEventListener('click', () => {
-      console.log('click');
-      // planet.style.border = "1px solid black";
+      //If u press on a planet it will activate planetPicture active which will replace the solarystem with the clicked planet and when u click on it again it will display the solarsystem info
       if (!planetPicture.classList.contains('active')) {
         planetPicture.classList.toggle('active');
         planetCardPictureContainer.style.cursor = 'pointer';
       }
+      //foreach planet u click on this code gives it its information in the infocard
       planetPicture.innerHTML = planet.innerHTML;
       planetPicture.style.backgroundColor = planet.style.backgroundColor;
       planetName.innerText = name;
       territoryName.innerText = planetNation;
       resourceName.innerText = planetResource;
       lifeFormName.innerText = planetLifeForm;
-
+      //If u press the sun it will show the following information
       if (planet.classList.contains('sun')) {
         resourceName.innerText = 'Light, Heat, Energy';
         territoryName.innerText =

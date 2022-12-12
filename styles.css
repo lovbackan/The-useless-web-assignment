@@ -11,6 +11,7 @@
     margin: 0px;
     padding: 0px;
     color: #b7e117;
+    font-family: 'nasalization';
 }
 
 header {
@@ -75,7 +76,7 @@ button {
 .planetCard {
     display: none;
     width: 18rem;
-    height: 54rem;
+    height: 56.5rem;
     border: 1px solid #b7e117;
     border-radius: 20px;
     flex-direction: column;
@@ -127,6 +128,7 @@ button {
 }
 
 .planetInfo {
+    padding-top: 1rem;
     height: 100%;
     width: 8.5rem;
     border: 1px solid #b7e117;
@@ -267,7 +269,7 @@ button {
     }
     .planetCard {
         width: 27rem;
-        height: 42.5rem;
+        height: 44.4rem;
     }
 
     .planetCardPictureContainer {

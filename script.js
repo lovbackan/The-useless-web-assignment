@@ -627,9 +627,9 @@ generationButton.addEventListener('click', () => {
             if (planet.classList.contains('sun')) {
                 resourceName.innerText = 'Light, Heat, Energy';
                 territoryName.innerText =
-                    'Since 1967 The Outer Space Treaty has prevented that no soverign nation can own celestial bodies like Moons or Suns';
+                    'Since 1967 The Outer Space Treaty has prevented that no soverign nation can own celestial bodies like Moons or Suns.';
                 lifeFormName.innerText =
-                    "Suns can not harbor life because of its extreme temperatures and radiation. Yet life on planets is only possible because of the Sun's light and energy.";
+                    "Right now, there's no evidence to support nuclear life on any suns due to their extreme temperatures and radiation.";
             }
         });
     });

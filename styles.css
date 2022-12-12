@@ -51,6 +51,10 @@ button {
     height: 3rem;
 }
 
+button {
+    font-size: 10px;
+}
+
 .buttonContainer {
     margin-right: 1rem;
 }
@@ -244,6 +248,7 @@ button {
 
     button {
         width: 5rem;
+        font-size: 16px;
     }
 }
 

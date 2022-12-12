@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="./styles.css" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solar-system.generator</title>
-  </head>
+    <head>
+        <link rel="stylesheet" href="./styles.css" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Solar-system.generator</title>
+    </head>
 
-  <header>
-    <h1>Solar System Generator</h1>
-    <div class="buttonContainer">
-      <button id="generateSolarSystem">Generate<br />system</button>
-      <button id="trajectoryButton">Show<br />rotation</button>
-    </div>
-  </header>
+    <header>
+        <h1>Solar System Generator</h1>
+        <div class="buttonContainer">
+            <button id="generateSolarSystem">Generate<br />system</button>
+            <button id="trajectoryButton">Show<br />rotation</button>
+        </div>
+    </header>
 
-  <body>
-    <section class="solarSystem">
-      <div id="seventhTrajectory" class="trajectory">
-        <div id="seventhPlanet" class="planet"></div>
-        <div id="sixthTrajectory" class="trajectory">
-          <div id="sixthPlanet" class="planet"></div>
-          <div id="fifthTrajectory" class="trajectory">
-            <div id="fifthPlanet" class="planet"></div>
-            <div id="fourthTrajectory" class="trajectory">
-              <div id="fourthPlanet" class="planet"></div>
-              <div id="thirdTrajectory" class="trajectory">
-                <div id="thirdPlanet" class="planet"></div>
-                <div id="secondTrajectory" class="trajectory">
-                  <div id="secondPlanet" class="planet"></div>
-                  <div id="firstTrajectory" class="trajectory">
-                    <div id="firstPlanet" class="planet"></div>
-                    <div id="sun" class="planet sun"></div>
-                  </div>
+    <body>
+        <section class="solarSystem">
+            <div id="seventhTrajectory" class="trajectory">
+                <div id="seventhPlanet" class="planet"></div>
+                <div id="sixthTrajectory" class="trajectory">
+                    <div id="sixthPlanet" class="planet"></div>
+                    <div id="fifthTrajectory" class="trajectory">
+                        <div id="fifthPlanet" class="planet"></div>
+                        <div id="fourthTrajectory" class="trajectory">
+                            <div id="fourthPlanet" class="planet"></div>
+                            <div id="thirdTrajectory" class="trajectory">
+                                <div id="thirdPlanet" class="planet"></div>
+                                <div id="secondTrajectory" class="trajectory">
+                                    <div id="secondPlanet" class="planet"></div>
+                                    <div
+                                        id="firstTrajectory"
+                                        class="trajectory"
+                                    >
+                                        <div
+                                            id="firstPlanet"
+                                            class="planet"
+                                        ></div>
+                                        <div id="sun" class="planet sun"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section class="planetGenerator">
-      <div class="planetCard">
-        <div id="planetNameContainer"><h2></h2></div>
-        <div class="planetCardPictureContainer">
-          <div class="planetCardPicture"></div>
-        </div>
-        <div class="planetCardInfo">
-          <div id="resources" class="planetInfo">
-            <h3>
-              Main <br />
-              resources:
-            </h3>
-            <p></p>
-          </div>
-          <div id="lifeForms" class="planetInfo">
-            <h3>Dominant life forms:</h3>
-            <p></p>
-          </div>
-          <div id="territoryName" class="planetInfo">
-            <h3>Territory occupied by:</h3>
-            <p></p>
-          </div>
-        </div>
-      </div>
-    </section>
+        <section class="planetGenerator">
+            <div class="planetCard">
+                <div id="planetNameContainer"><h2></h2></div>
+                <div class="planetCardPictureContainer">
+                    <div class="planetCardPicture"></div>
+                </div>
+                <div class="planetCardInfo">
+                    <div id="resources" class="planetInfo">
+                        <h3>
+                            Main <br />
+                            resources:
+                        </h3>
+                        <p></p>
+                    </div>
+                    <div id="lifeForms" class="planetInfo">
+                        <h3>Dominant life forms:</h3>
+                        <p></p>
+                    </div>
+                    <div id="territoryName" class="planetInfo">
+                        <h3>Territory occupied by:</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <script src="script.js"></script>
-  </body>
+        <script src="script.js"></script>
+    </body>
 </html>

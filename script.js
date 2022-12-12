@@ -627,7 +627,7 @@ generationButton.addEventListener('click', () => {
         territoryName.innerText =
           'Since 1967 The Outer Space Treaty has prevented that no soverign nation can own celestial bodies like Moons or Suns';
         lifeFormName.innerText =
-          "Suns can not harbor life as we know it because of its extreme temperatures and radiation. Yet life on planets is only possible because of the Sun's light and energy.";
+          "Suns can not harbor life because of its extreme temperatures and radiation. Yet life on planets is only possible because of the Sun's light and energy.";
       }
     });
   });

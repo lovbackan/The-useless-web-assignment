@@ -89,13 +89,11 @@ const planetNames = [
 ];
 
 const galaxyNames = [
-    'The Duerebus Hedopia System',
     'Wanule Remgania Sector',
     'Tagchia Ozelialia System',
     'Ladoros System',
     'Durvana Sector',
     "The Xe'elialia System",
-    'The Delta Kepeaux Pulsar System',
     'The Deeponine Vicinity',
     'Ladvis Aerdania System',
     'The Deepoid Space',
@@ -109,7 +107,6 @@ const galaxyNames = [
     'The Major Trelius Sector',
     "The Ur'an Spiral",
     'The Copernicus Nebula',
-    'The Epsilon Outurn Star System',
     'The Super Merangolia Belt',
     'The Deeplak Expanse',
     'Logatis System',
@@ -117,8 +114,7 @@ const galaxyNames = [
     'Huygens Coronal Stream',
     'The Super Sunarth Vortex',
     'Epsilon Taronia Expanse',
-    'Guntatoid Coronal Stream',
-    "The Ataridian Xe'adon Vicinity"
+    'Guntatoid Coronal Stream'
 ];
 
 let galaxyName;

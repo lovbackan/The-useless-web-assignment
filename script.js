@@ -486,14 +486,20 @@ let systemResources = [];
 let systemCountriesList = [];
 let systemResourcesList = [];
 let systemLifeFormsList = [];
-
-//On click start animation (BUGG -only works once tho, then u need to refresh the page);
+let rot = 360;
+//On click start animation;
 trajButton.addEventListener('click', () => {
-    seventhTraj.style.transform = 'rotate(360deg)';
+    if (solarSystem.classList.contains('active')) {
+        rot = rot + 1;
+        seventhTraj.style = 'transform: rotate(' + rot + 'deg)';
+    }
 });
-//On scroll start animation (still only works once);
+//On scroll start animation;
 window.addEventListener('scroll', () => {
-    seventhTraj.style.transform = 'rotate(360deg)';
+    if (solarSystem.classList.contains('active')) {
+        rot = rot + 1;
+        seventhTraj.style = 'transform: rotate(' + rot + 'deg)';
+    }
 });
 
 generationButton.addEventListener('click', () => {

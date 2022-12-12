@@ -482,14 +482,16 @@ let systemResources = [];
 let systemCountriesList = [];
 let systemResourcesList = [];
 let systemLifeFormsList = [];
+
+//On click start animation! Starts with a 360 rotation but for each click and scroll it increases by one, by doing this it will keep going, i had a problem before that when u did not increase rot and let it only stay at 360 it only worked once
 let rot = 360;
-//On click start animation;
 trajButton.addEventListener('click', () => {
     if (solarSystem.classList.contains('active')) {
         rot = rot + 1;
         seventhTraj.style = 'transform: rotate(' + rot + 'deg)';
     }
 });
+
 //On scroll start animation;
 window.addEventListener('scroll', () => {
     if (solarSystem.classList.contains('active')) {

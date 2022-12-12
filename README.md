@@ -2,7 +2,7 @@
 
 # Solar-System-Generator
 
-https://solarsystemgenerator.netlify.app
+[Solar System Generator](https://solarsystemgenerator.netlify.app)
 
 I made a solar system generator for our meaningless web assignment, but to be honest I hope this can maybe inspire someone who is searching for inspiration in their creative endeavours or just entertain someone a short while!
 

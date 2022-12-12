@@ -200,7 +200,6 @@ const countryList = [
   'Costa Rica',
   'Cote D Ivoire',
   'Croatia',
-  'Cruise Ship',
   'Cuba',
   'Cyprus',
   'Czech Republic',

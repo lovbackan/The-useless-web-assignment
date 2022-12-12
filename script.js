@@ -490,18 +490,11 @@ let systemLifeFormsList = [];
 //On click start animation (BUGG -only works once tho, then u need to refresh the page);
 trajButton.addEventListener('click', () => {
     seventhTraj.style.transform = 'rotate(360deg)';
-    seventhPlan.style.transform = 'rotate(-360deg)';
 });
-
-window.onscroll = function () {
-    scrollRotate();
-};
-
-//now you can either press button or scroll to start the animation (still only works once)
-function scrollRotate() {
+//On scroll start animation (still only works once);
+window.addEventListener('scroll', () => {
     seventhTraj.style.transform = 'rotate(360deg)';
-    seventhPlan.style.transform = 'rotate(-360deg)';
-}
+});
 
 generationButton.addEventListener('click', () => {
     //Randomizes a galaxy name and removes the name from the array

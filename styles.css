@@ -84,6 +84,10 @@ button {
     padding-top: 1rem;
 }
 
+.planetCard p {
+    font-size: 14px;
+}
+
 .planetCardPictureContainer,
 .planetCardPicture,
 .planetCardPicture.active,
@@ -272,6 +276,9 @@ button {
         height: 44.4rem;
     }
 
+    .planetCard p {
+        font-size: 16px;
+    }
     .planetCardPictureContainer {
         width: 22.2rem;
         height: 23rem;

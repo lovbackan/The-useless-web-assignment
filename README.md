@@ -5,7 +5,7 @@
 During our first months studying web developement at Yrgo we were tasked to create a fun project in vanilla JS that was supposed to be totally meaningless.
 I made a solar system generator, ment to hopefully inspire someone who is searching for inspiration in their creative endeavours or just entertain someone a short while!
 
-#Deployment
+# Deployment
 
 [Solar System Generator](https://solarsystemgenerator.netlify.app)
 

@@ -15,6 +15,7 @@ const territoryName = document.querySelector('#territoryName p');
 const resourceName = document.querySelector('#resources p');
 const lifeFormName = document.querySelector('#lifeForms p');
 
+
 //sorry for the long arrays, prettier wants them to be displayed this way
 const planetNames = [
   'Vucuilara',
@@ -582,12 +583,18 @@ generationButton.addEventListener('click', () => {
 
     //For every planet that is not the sun generate a rgb color, and give them a resource and lifeform
     if (!planet.classList.contains('sun')) {
-      let r = Math.floor(Math.random() * 255);
-      let g = Math.floor(Math.random() * 255);
-      let b = Math.floor(Math.random() * 255);
+      let r1 = Math.floor(Math.random() * 255);
+      let g1 = Math.floor(Math.random() * 255);
+      let b1 = Math.floor(Math.random() * 255);
+      let r2 = Math.floor(Math.random() * 255);
+      let g2 = Math.floor(Math.random() * 255);
+      let b2 = Math.floor(Math.random() * 255);
+    
       planetResource = systemResources[index];
       planetLifeForm = systemLifeForms[index];
-      planet.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+    
+      // Create a gradient background color using CSS linear gradient
+      planet.style.background = `linear-gradient(to bottom, rgb(${r1},${g1},${b1}), rgb(${r2},${g2},${b2}))`;
     } else {
       // The sun shall always remain orange
       planet.style.backgroundColor = 'orange';

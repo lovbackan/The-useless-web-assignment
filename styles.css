@@ -231,6 +231,14 @@ button {
   height: 15%;
 }
 
+#generateSolarSystem {
+  cursor: pointer;
+}
+
+#trajectoryButton {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 360px) {
   h1 {
     font-size: 13px;

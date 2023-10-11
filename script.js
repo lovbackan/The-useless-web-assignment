@@ -41,11 +41,9 @@ fetch('./listnames/planetNames.json')
     window.planetNames = data.planetNames;
   })
 
-
 let galaxyName;
 
 let systemLifeForms = [];
-
 
 let systemCountries = [];
 

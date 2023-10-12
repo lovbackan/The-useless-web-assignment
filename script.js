@@ -127,7 +127,7 @@ generationButton.addEventListener('click', () => {
       planetPicture.classList.remove('active');
       planetCardPictureContainer.style.cursor = 'default';
       planetPicture.innerHTML = solarSystem.innerHTML;
-      planetPicture.style.backgroundColor = 'black';
+      planetPicture.style.background = 'black';
       planetName.innerText = galaxyName;
       territoryName.innerText = systemCountriesList.toString();
       resourceName.innerText = systemResourcesList.toString();
@@ -165,10 +165,11 @@ generationButton.addEventListener('click', () => {
       planetLifeForm = systemLifeForms[index];
 
       // Create a gradient background color using CSS linear gradient
+
       planet.style.background = `linear-gradient(to bottom, rgb(${r1},${g1},${b1}), rgb(${r2},${g2},${b2}))`;
     } else {
       // The sun shall always remain orange
-      planet.style.backgroundColor = 'orange';
+      planet.style.background = 'orange';
     }
 
     planet.addEventListener('mouseover', () => {

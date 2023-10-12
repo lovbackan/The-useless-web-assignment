@@ -16,30 +16,30 @@ const resourceName = document.querySelector('#resources p');
 const lifeFormName = document.querySelector('#lifeForms p');
 
 fetch('./listnames/countryList.json')
-  .then(response => response.json())
-  .then(data => {
+  .then((response) => response.json())
+  .then((data) => {
     window.countryList = data.countryList;
-  })
+  });
 fetch('./listnames/elements.json')
-  .then(response => response.json())
-  .then(data => {
+  .then((response) => response.json())
+  .then((data) => {
     window.elements = data.elements;
-  })
+  });
 fetch('./listnames/galaxyNames.json')
-  .then(response => response.json())
-  .then(data => {
+  .then((response) => response.json())
+  .then((data) => {
     window.galaxyNames = data.galaxyNames;
-  })
+  });
 fetch('./listnames/lifeKingdoms.json')
-  .then(response => response.json())
-  .then(data => {
+  .then((response) => response.json())
+  .then((data) => {
     window.lifeKingdoms = data.lifeKingdoms;
-  })
+  });
 fetch('./listnames/planetNames.json')
-  .then(response => response.json())
-  .then(data => {
+  .then((response) => response.json())
+  .then((data) => {
     window.planetNames = data.planetNames;
-  })
+  });
 
 let galaxyName;
 
@@ -160,10 +160,10 @@ generationButton.addEventListener('click', () => {
       let r2 = Math.floor(Math.random() * 255);
       let g2 = Math.floor(Math.random() * 255);
       let b2 = Math.floor(Math.random() * 255);
-    
+
       planetResource = systemResources[index];
       planetLifeForm = systemLifeForms[index];
-    
+
       // Create a gradient background color using CSS linear gradient
       planet.style.background = `linear-gradient(to bottom, rgb(${r1},${g1},${b1}), rgb(${r2},${g2},${b2}))`;
     } else {
@@ -190,11 +190,12 @@ generationButton.addEventListener('click', () => {
       }
       //foreach planet u click on this code gives it its information in the infocard
       planetPicture.innerHTML = planet.innerHTML;
-      planetPicture.style.backgroundColor = planet.style.backgroundColor;
+      planetPicture.style.background = planet.style.background;
       planetName.innerText = name;
       territoryName.innerText = planetNation;
       resourceName.innerText = planetResource;
       lifeFormName.innerText = planetLifeForm;
+      console.log(planetPicture.style.backgroundColor);
       //If u press the sun it will show the following information
       if (planet.classList.contains('sun')) {
         resourceName.innerText = 'Light, Heat, Energy';
